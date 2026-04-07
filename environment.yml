@@ -1,0 +1,14 @@
+name: sdm_ecg_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - numpy
+  - pandas
+  - matplotlib
+  - scipy
+  - pyqt
+  - pip
+  - pip:
+    - pyqtgraph

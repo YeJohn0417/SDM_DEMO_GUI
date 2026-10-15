@@ -7,6 +7,15 @@
 
 ---
 
+## 🌟 主要功能
+* **整體系統展示**：執行 `ecg_gui_arrhythmia.py`，接上前端 ESP32 或其他 MCU，及時顯示 + 整合其他演算法的 gui，展示用。
+* **測試演算法正確性**：執行 `ecg_gui_pyqtgraph_test.py`，程式會重複讀取 `./dataset/ecg_hand.csv` 的資料繪製成圖。
+* **數位濾波器原理**：執行 `filter.py`，有數位濾波器的演算法，數位濾波器設計可以用 mathlab 內建的 filter app 進行設計，app內有頻率響應。
+* **資料接收**：執行 `spi_receive.py`子程式，接收 COM 進來的訊號。
+* **量化**：執行 `quant.py`，對資料量化，為後續作成硬體使用。
+
+---
+
 ## 🔗 前端硬體與通訊程式
 
 本專案主要負責後端 PC 的訊號接收、數位濾波與 ECG 波形顯示。若要進行即時訊號量測，需搭配前端 **ESP32 或其他 MCU**，將 SDM ADC 輸出的資料傳輸至 PC。
@@ -22,14 +31,8 @@
 - 若沒有實際硬體，可使用 `./dataset/ecg_hand.csv` 測試濾波器與 GUI 顯示功能。
 - 執行 `ecg_gui_pyqtgraph_test.py` 可直接讀取測試資料，不需要連接 ESP32。
 
-## 🌟 主要功能
-* **整體系統展示**：執行 `ecg_gui_arrhythmia.py`，接上前端 ESP32 或其他 MCU，及時顯示 + 整合其他演算法的 gui，展示用。
-* **測試演算法正確性**：執行 `ecg_gui_pyqtgraph_test.py`，程式會重複讀取 `./dataset/ecg_hand.csv` 的資料繪製成圖。
-* **數位濾波器原理**：執行 `filter.py`，有數位濾波器的演算法，數位濾波器設計可以用 mathlab 內建的 filter app 進行設計，app內有頻率響應。
-* **資料接收**：執行 `spi_receive.py`子程式，接收 COM 進來的訊號。
-* **量化**：執行 `quant.py`，對資料量化，為後續作成硬體使用。
-
 ---
+
 ## 💻 執行環境
 在 `environment.yml` 寫好執行需要的套件，直接在終端機輸入
 ```

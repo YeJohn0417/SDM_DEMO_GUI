@@ -7,6 +7,25 @@
 
 ---
 
+## 🔗 前端硬體與通訊程式
+
+本專案主要負責後端 PC 的訊號接收、數位濾波與 ECG 波形顯示。若要進行即時訊號量測，需搭配前端 **ESP32 或其他 MCU**，將 SDM ADC 輸出的資料傳輸至 PC。
+
+**前端 ESP32 程式：**
+
+[ADC_transfer_to_PC — GitHub Repository](https://github.com/YeJohn0417/ADC_transfer_to_PC)
+
+前端程式使用 **VS Code + PlatformIO** 進行韌體編譯與燒錄。
+
+詳細環境建置與燒錄教學：
+
+[PlatformIO 安裝與燒錄教學（HackMD）](https://hackmd.io/_LYTcM6nTo6-vib3VBZeuw)
+
+**注意事項：**
+- 即時量測模式需連接前端 ESP32 或其他相容的 MCU。
+- 若沒有實際硬體，可使用 `./dataset/ecg_hand.csv` 測試濾波器與 GUI 顯示功能。
+- 執行 `ecg_gui_pyqtgraph_test.py` 可直接讀取測試資料，不需要連接 ESP32。
+
 ## 🌟 主要功能
 * **整體系統展示**：執行 `ecg_gui_arrhythmia.py`，接上前端 ESP32 或其他 MCU，及時顯示 + 整合其他演算法的 gui，展示用。
 * **測試演算法正確性**：執行 `ecg_gui_pyqtgraph_test.py`，程式會重複讀取 `./dataset/ecg_hand.csv` 的資料繪製成圖。

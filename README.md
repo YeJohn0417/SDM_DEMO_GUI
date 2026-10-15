@@ -17,10 +17,6 @@
 
 前端程式使用 **VS Code + PlatformIO** 進行韌體編譯與燒錄。
 
-詳細環境建置與燒錄教學：
-
-[PlatformIO 安裝與燒錄教學（HackMD）](https://hackmd.io/_LYTcM6nTo6-vib3VBZeuw)
-
 **注意事項：**
 - 即時量測模式需連接前端 ESP32 或其他相容的 MCU。
 - 若沒有實際硬體，可使用 `./dataset/ecg_hand.csv` 測試濾波器與 GUI 顯示功能。
